@@ -27,9 +27,9 @@ body {
     /*sets the font size to 16px*/
     line-height: 1.6;
     /*sets the line-height to 1.6*/
-}
+}    
 /*setting diffrent font for headline*/
-h1 {              
+h1 {
     font-family: 'Gugi', sans-serif;                        
     font-size: 30px;
     font-weight: var(--uniform-fw);
@@ -129,7 +129,7 @@ opacity: 0.6;
     display: flex;
     flex-direction: column;
     text-align: center;
-    
+
 }
 .profile__text {
     flex: 1 1 100px;
@@ -148,7 +148,7 @@ opacity: 0.6;
 
 }
 .navigation-list {
-    list-style-type: none; 
+    list-style-type: none;
 }
 .navigation-list li {
     display: inline-block;
@@ -174,7 +174,7 @@ opacity: 0.6;
     width: auto;
 }
 .grid__item:last-child {
-    /*grid-column-start: 3; 
+    /*grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;  */
@@ -211,7 +211,7 @@ opacity: 0.6;
 .button2,
 .button3,
 .my-input {
-    /* your styling goes here 
+    /* your styling goes here
     color: black;
 }
 */
@@ -252,15 +252,15 @@ button:focus,
     display: flex;
     flex-direction: column;
     text-align: center;
-    
+
 }
 .berlin-illustration {
     max-width: 700;
     margin: 0 auto;
-    
+
 }
 /*centering "about"*/
-.about-info {    
+.about-info {
     text-align: center;
 }
 /* centering bottom table*/
@@ -310,14 +310,3 @@ button:focus,
 .cloud-back {
     animation: 30s cloud-move-reverse infinite alternate linear;
 }
-
-
-
-
-
-
-
-
-
-
-
