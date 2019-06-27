@@ -95,7 +95,7 @@ button:hover, button:focus {
 opacity: 0.6;
 }
 .navigation-list__item:active {
-    opacity: 1.0;
+    opacity: 1.0;     
     color: var(--active-link);
 }
 .navigation-list__item {
@@ -244,25 +244,33 @@ button:focus,
 }
 .about-info__item {
     list-style-type: none;
-
+    padding: 0;
 }
 /*centering img*/
 .berlin-illustration {
     clear: both;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     text-align: center;
-
+    flex-shrink: 1;
 }
 .berlin-illustration {
     max-width: 700;
-    margin: 0 auto;
-
+    margin: auto auto;
 }
+.svg-icon-container {
+    display: flex;
+    text-align: center;
+}
+
 /*centering "about"*/
 .about-info {
     text-align: center;
 }
+.about-info-item {
+    display: inline-block;
+}
+
 /* centering bottom table*/
 .skill-table {
     margin-left: auto;
@@ -310,3 +318,80 @@ button:focus,
 .cloud-back {
     animation: 30s cloud-move-reverse infinite alternate linear;
 }
+.contact-info {
+    text-align: center;
+}
+.contact-headline {
+    text-align: center;
+}
+.contact-tools {
+    display: flex;
+    justify-content: space-evenly;        
+    
+}
+.contact-tools {
+    max-width: 700;
+    margin: auto auto;
+}
+/*making home page responsive*/
+@media all and (max-width: 700px) {
+    .default-sec_button {
+        float: left;
+    }
+}
+@media all and (max-width: 410px) {
+    .default-sec_button {
+        transform: scale(0.7);
+        display: flex;
+        justify-content: space-evenly;        
+    }
+    .headline {
+        font-size: 20px;
+    }
+    .profile {
+        font-size: 12px;
+    }    
+}
+@media all and (max-width: 380px) {
+    .headline {
+        float: left;
+    }
+    .profile__portrait {
+        float: center;
+    }
+    .whatami {
+        float: left;
+    }
+    .checkout {
+        float: left;
+    }
+}
+/*make about page responsive*/
+@media all and (max-width: 1000px){
+    .berlin-illustration {
+        transform: scale(0.7);        
+    }
+}
+@media all and (max-width: 600px) {
+    .about-info {
+        transform: scale(0.7);
+    }
+    .page-header__item {
+        transform: scale(0.7);
+    }
+    .skill-table {
+        transform: scale(0.7);
+    }    
+}
+/*make contact page responsive*/
+@media all and (max-width: 450px) {
+    .page-header__item {
+        transform: scale(0.5);
+    }
+    .send-msg__button {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+

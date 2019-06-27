@@ -5,34 +5,47 @@ Text Color   (Dark Gray): #2b2b2b;
 Primary Color   (Purple): #357b70;
 Secondary Color (Orange): #e0b354;
 */
+:root {
+    --primary-color: #357b70;
+    --secondary-color: #e0b354;
+    --dark-grey: #2b2b2b;
+    --visited-link: blue;
+    --active-link: green;
+    --button-font: white;
+    --grid-color: lightgray;
+    --body-color: lightblue;
+    --item-padding: 10px;
+    --uniform-fw: 700;
+    --cloud-move-y: 50px;
+    --clode-move-reverse-y: 48px;
+}
 body {
-    background-color: lightblue;
+    background-color: var(--body-color);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size:16px;
     /*sets the font size to 16px*/
     line-height: 1.6;
     /*sets the line-height to 1.6*/
-}
-/*setting diffrent font for headline1*/
-
-h1 {              
+}    
+/*setting diffrent font for headline*/
+h1 {
     font-family: 'Gugi', sans-serif;                        
     font-size: 30px;
-    font-weight: 700;
+    font-weight: var(--uniform-fw);
     text-decoration: underline;
     /*text-decoration-color: blueviolet;*/
 }
 h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: var(--uniform-fw);
 }
 h3 {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--uniform-fw);
 }
 a {
-    color: blue;
+    color: var(--visited-link);
 }
 a:hover, a:focus {
     /*disabling underlining when hovering over link */
@@ -40,11 +53,11 @@ text-decoration: none;
 }
 a:visited {
     /* visited link*/
-    color: blue;
+    color: var(--visited-link);
 }
 a:active {
     /*selected link*/
-    color: green
+    color: var(--active-link)
 }
 input, texture, select, button{
     font-family: system-ui;
@@ -55,11 +68,11 @@ button {
     /*takes the font from the outer container*/
     font-family: inherit;
     /*styles the background color, font color, and text decoration (underline, etc.) of the button */
-    background-color: #357b70;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--button-font);
     text-decoration: none;
     /*adds spacing to the button */
-    padding: 10px;
+    padding: var(--item-padding);
     border-radius: 3px;
     /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA form at */
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -72,8 +85,8 @@ button:hover, button:focus {
 
 }
 .button_secondary {
-    background-color: #e0b354;
-    color: #2b2b2b;
+    background-color: var(--secondary-color);
+    color: var(--dark-grey);
 }
 .navigation-list__item:visited {
     color:blueviolet;
@@ -82,8 +95,8 @@ button:hover, button:focus {
 opacity: 0.6;
 }
 .navigation-list__item:active {
-    opacity: 1.0;
-    color: green;
+    opacity: 1.0;     
+    color: var(--active-link);
 }
 .navigation-list__item {
     text-decoration: none;
@@ -122,7 +135,7 @@ opacity: 0.6;
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    
+
 }
 .profile__text {
     -webkit-box-flex: 1;
@@ -149,7 +162,7 @@ opacity: 0.6;
 
 }
 .navigation-list {
-    list-style-type: none; 
+    list-style-type: none;
 }
 .navigation-list li {
     display: inline-block;
@@ -171,13 +184,13 @@ opacity: 0.6;
 
 }
 .grid__item {
-    background-color: lightgray;
-    padding: 10px;
+    background-color: var(--grid-color);
+    padding: var(--item-padding);
     /* set width to auto */
     width: auto;
 }
 .grid__item:last-child {
-    /*grid-column-start: 3; 
+    /*grid-column-start: 3;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 3;  */
@@ -219,40 +232,22 @@ opacity: 0.6;
 .button2,
 .button3,
 .my-input {
-    /* your styling goes here 
+    /* your styling goes here
     color: black;
 }
 */
 /* About me page*/
-.button {
+.button, button {
     /*overwrites browser defaults and resets border */
     border: none;
     display: inline-block;
     /*takes the font from outer container */
     font-family: inherit;
     /* styles the button */
-    background-color: #357b70;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--button-font);
     text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    /* width of the border, type, color */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    /* transition time till opacity lvl reached */
-    -webkit-transition: 0.2s opacity;
-    transition: 0.2s opacity;
-}
-button {
-    /*overwrites browser defaults and resets border */
-    border: none;
-    display: inline-block;
-    /*takes the font from outer container */
-    font-family: inherit;
-    /* styles the button */
-    background-color: #357b70;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
+    padding: var(--item-padding);
     border-radius: 3px;
     /* width of the border, type, color */
     border-bottom: 2px solid rgba(0, 0, 0, 0.3);
@@ -269,10 +264,9 @@ button:focus,
     /* reduces the opacity of  the button to 80% */
     opacity: 0.8;
 }
-
 .about-info__item {
     list-style-type: none;
-
+    padding: 0;
 }
 /*centering img*/
 .berlin-illustration {
@@ -283,18 +277,29 @@ button:focus,
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column;
+            flex-direction: column;    
     text-align: center;
-    
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
 }
 .berlin-illustration {
     max-width: 700;
-    margin: 0 auto;
-    
+    margin: auto auto;
 }
-/*centering "about"*/
-.about-info {    
+.svg-icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     text-align: center;
+    margin: auto auto;
+}
+
+/*centering "about"*/
+.about-info {
+    text-align: center;
+}
+.about-info-item {
+    display: inline-block;
 }
 /* centering bottom table*/
 .skill-table {
@@ -332,22 +337,22 @@ button:focus,
 /*defining  movement of cloud - where*/
 @-webkit-keyframes cloud-move {
     from {
-        -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px);
+        -webkit-transform: translate(0, var(--cloud-move-y));
+                transform: translate(0, var(--cloud-move-y));
     }
     to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
+        -webkit-transform: translate(200px, var(--cloud-move-y));
+                transform: translate(200px, var(--cloud-move-y));
     }
 }
 @keyframes cloud-move {
     from {
-        -webkit-transform: translate(0, 50px);
-                transform: translate(0, 50px);
+        -webkit-transform: translate(0, var(--cloud-move-y));
+                transform: translate(0, var(--cloud-move-y));
     }
     to {
-        -webkit-transform: translate(200px, 50px);
-                transform: translate(200px, 50px);
+        -webkit-transform: translate(200px, var(--cloud-move-y));
+                transform: translate(200px, var(--cloud-move-y));
     }
 }
 /*defining and applying animation on cloud - how*/
@@ -358,26 +363,119 @@ button:focus,
 /* defining movement of background cloud - where*/
 @-webkit-keyframes cloud-move-reverse {
     from {
-        -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
+        -webkit-transform: translate(446px, var(--clode-move-reverse-y));
+                transform: translate(446px, var(--clode-move-reverse-y));
     }
     to {
-        -webkit-transform: translate(100px, 48px);
-                transform: translate(100px, 48px);
+        -webkit-transform: translate(100px, var(--clode-move-reverse-y));
+                transform: translate(100px, var(--clode-move-reverse-y));
     }
 }
 @keyframes cloud-move-reverse {
     from {
-        -webkit-transform: translate(446px, 48px);
-                transform: translate(446px, 48px);
+        -webkit-transform: translate(446px, var(--clode-move-reverse-y));
+                transform: translate(446px, var(--clode-move-reverse-y));
     }
     to {
-        -webkit-transform: translate(100px, 48px);
-                transform: translate(100px, 48px);
+        -webkit-transform: translate(100px, var(--clode-move-reverse-y));
+                transform: translate(100px, var(--clode-move-reverse-y));
     }
 }
 /*defining and applying animation on background cloud - how */
 .cloud-back {
     -webkit-animation: 30s cloud-move-reverse infinite alternate linear;
             animation: 30s cloud-move-reverse infinite alternate linear;
+}
+.contact-info {
+    text-align: center;
+}
+.contact-headline {
+    text-align: center;
+}
+.contact-tools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;        
+    
+}
+.contact-tools {
+    max-width: 700;
+    margin: auto auto;
+}
+/*making home page responsive*/
+@media all and (max-width: 700px) {
+    .default-sec_button {
+        float: left;
+    }
+}
+@media all and (max-width: 410px) {
+    .default-sec_button {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;        
+    }
+    .headline {
+        font-size: 20px;
+    }
+    .profile {
+        font-size: 12px;
+    }    
+}
+@media all and (max-width: 380px) {
+    .headline {
+        float: left;
+    }
+    .profile__portrait {
+        float: center;
+    }
+    .whatami {
+        float: left;
+    }
+    .checkout {
+        float: left;
+    }
+}
+/*make about page responsive*/
+@media all and (max-width: 1000px){
+    .berlin-illustration {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7);        
+    }
+}
+@media all and (max-width: 600px) {
+    .about-info {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+    }
+    .page-header__item {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+    }
+    .skill-table {
+        -webkit-transform: scale(0.7);
+                transform: scale(0.7);
+    }    
+}
+/*make contact page responsive*/
+@media all and (max-width: 450px) {
+    .page-header__item {
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+    }
+    .send-msg__button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+    }
 }
