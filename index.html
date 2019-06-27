@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>                                                                                                                   <!-- "head-tag" title, invisible content-->
+    <head>  <!-- "head-tag" title, invisible content-->
         <meta charset="utf-8">
         <title>Wilhelm Busch-Portfolio</title>
-        <link rel="shortcut icon" href="http://wikipedia.com/static/favicon/wikipedia.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="img/shortcuticon.ico" type="image/x-icon"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">  <!--linking CSS-->
-        <link href="https://fonts.googleapis.com/css?family=GugiMontserrat" rel="stylesheet">                               <!--linking font-->
+        <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">                               <!--linking font-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.production.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">        
+        <meta name= "viewport" content="width=devive-width, initial-scale=1.0">
+        <!---<link rel= "stylesheet" href="css/bootstap.css">
+        <link rel= "stylesheet" href="css/bootstrap-responsive.css">-->
     </head>        
     <!--"body-tag" contains visible content-->
     <body>
@@ -34,16 +36,20 @@
         </header>
         <div class="profile">
             <img src="img/fromimgme.JPG" class="profile__portrait" alt="Wilhelm Busch Portrait" height="150" width="150">                             <!--adding portrait of myself-->
-            <h1>Hello World</h1>
-            <p>My name is Wilhelm Busch. I am a <span>web</span> developer from Germany.</p>
-            <a href="work.html">Check out some of my code</a>
+            <h1 class="headline">Hello World</h1>
+            <p class="whatami">My name is Wilhelm Busch. I am a <span>web</span> developer from Germany.</p>
+            <a href="work.html" class= "checkout">Check out some of my code</a>
         </div>
         <br/>
         <br/>
         <br/>
-        <a href="#">Default Link</a>
-        <button type="button">Default Button</button>
-        <button class="button_secondary">Secondary Button</button>
+        <div>
+            <div class="default-sec_button">
+                <a href="#">Default Link</a>
+                <button type="button">Default Button</button>
+                <button class="button_secondary">Secondary Button</button>
+            </div>
+        </div>
         <br/>
         <br/>
         <!--Footer with socialmedia links-->
